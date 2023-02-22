@@ -1,0 +1,13 @@
+<h1>All flats</h1>
+
+<div class="container text-left">
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-4">
+      <%= render flat %>
+      <%= link_to 'Vew flat', flat_path(flat) %>
+      <%= link_to "Delete", flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'btn btn-danger'%>
+      </div>
+    <% end %>
+  </div>
+</div>

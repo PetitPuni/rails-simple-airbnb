@@ -1,0 +1,4 @@
+<%= render @flat %>
+<p><%= link_to 'Edit flat', edit_flat_path(@flat) %></p>
+<p><%= link_to "Delete", flat_path(@flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'btn btn-danger'%></p>
+<p><%= link_to 'Back to Flats', flats_path %></p>
